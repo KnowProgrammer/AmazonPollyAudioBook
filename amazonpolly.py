@@ -27,12 +27,12 @@ def pollytext(filename,pollyvoice):
     # transform text with about 1,500 characters, we are dividing the
     # post into blocks of approximately 1,000 characters.
     textBlocks = []
-    while (len(rest) > 2100):
+    while (len(rest) > 1400):
         begin = 0
-        end = rest.find(".", 2000)
+        end = rest.find(".", 1000)
 
         if (end == -1):
-            end = rest.find(" ", 2000)
+            end = rest.find(" ", 1000)
 
         textBlock = rest[begin:end]
         rest = rest[end:]
