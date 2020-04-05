@@ -35,7 +35,7 @@ def pollytext(filename,pollyvoice):
             end = rest.find(" ", 1000)
 
         textBlock = rest[begin:end]
-        rest = rest[end:]
+        rest = rest[end+1:] #Remove the annoying "Dot" that otherwise starts each new block since you no longer start on that index.
         textBlocks.append(textBlock)
     textBlocks.append(rest)
 
@@ -66,11 +66,3 @@ def pollytext(filename,pollyvoice):
 
 
 pollytext('bookwormvol1.txt','Amy')
-
-
-
-
-
-
-
-
